@@ -8,26 +8,41 @@ I. [**Introduction**]
   3. Introduction to basic categories of setup and hold analysis, data checks and latch timing
   4. Introduction to slew, load and clock checks
 
-II. [**RTL Design and Synthesis**](https://github.com/drvasanthi/iiitb_cg#ii-rtl-design-and-synthesis)  
-  1. [Icarus Verilog (iverilog) & Yosys Installation on Ubuntu](https://github.com/drvasanthi/iiitb_cg#1-icarus-verilog-iverilog--yosys-installation-on-ubuntu)  
-  2. [RTL Pre-Simulation](https://github.com/drvasanthi/iiitb_cg#rtl-pre-simulation)  
-  3. [Synthesis](https://github.com/drvasanthi/iiitb_cg#icg---synthesis)  
-  4. [GLS Post-simulation](https://github.com/drvasanthi/iiitb_cg#gls-post-simulation)  
+II. [**Introduction to Timing Graph**]
+  1. [Convert logic gates into nodes] 
+  2. [Compute actual arrival time]
+  3. [Compute required arrival time]
+  4. [Compute slack and introduction to GBA-PBA analysis]  
+  5. [Compute pins to nodes and compute AAT,RAT and slack]  
 
-III. [**Physical Design from Netlist to GDSII**](https://github.com/drvasanthi/iiitb_cg#iii-physical-design-from-netlist-to-gdsii)  
-  1. [Invoke OpenLane](https://github.com/drvasanthi/iiitb_cg#1-invoke-openlane)  
-  2. [To Build Inverter Standard Cell Design](https://github.com/drvasanthi/iiitb_cg#2-to-build-inverter-standard-cell-design)  
-  3. [Synthesis](https://github.com/drvasanthi/iiitb_cg#3-synthesis)      
-  4. [Floorplan](https://github.com/drvasanthi/iiitb_cg#4-floorplan)
+III. [**Clock-to-q delay, library setup, hold time and jitter**]  
+  1. [Introduction to transistor level circuit for flops]  
+  2. [Negative and positive latch transistor level operation]  
+  3. [Library setup time calculation]  
+  4. [Clock-to-q delay calculation]  
+  5. [Steps to create eye diagram for jitter analysis]  
+  6. [Jitter extraction and accounting setup timing analysis]  
+
+IV. [**Textual timing report and hold analysis**]  
+  1. [Setup Analysis - graphical to textual representation]  
+  2. [Hold analysis with real clock]  
+  3. [Hold Analysis - graphical to textual representation]
+
+V. [**On-chip Variation**]  
+  1. [Sources of variation - etching]  
+  2. [Sources of variation - oxide thickness]  
+  3. [Relation between resistance, drain current and delay]  
+
+VI. [**OCV timing and Pessimism removal**]
+  1. [OCV based setup timing analysis]  
+  2. [Setup timing analysis after pessimism removal]
+  3. [OCV based hold timing analysis]
+  4. [Hold timing analysis after pessimism removal]
   
-  
-  
-  
+   
 <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
   
 ## TABLE OF CONTENT
-  
-  
   
 ## **I. Introduction**
   
@@ -103,7 +118,72 @@ III. [**Physical Design from Netlist to GDSII**](https://github.com/drvasanthi/i
    
    ![image](https://user-images.githubusercontent.com/67214592/190871691-45254e6e-6977-4a5e-8cee-b95b2010feba.png)
    
+## **II. Introduction to Timing Graph**
+
+  ### **1. Convert logic gates into nodes**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190871819-08cc8871-284d-4a01-959b-65aaccb27ff0.png)
    
+   ![image](https://user-images.githubusercontent.com/67214592/190872171-b672dd3c-2e02-46d6-9aa8-c6bc65158ea1.png)
+   
+   ![image](https://user-images.githubusercontent.com/67214592/190872306-a3b5d708-242d-442e-8868-6ebb5385f639.png)
+   
+  ### **2. Compute actual arrival time**
+    
+   ![image](https://user-images.githubusercontent.com/67214592/190872479-4ac85c07-72d8-4aa1-9932-bed2e2f5204a.png)
+  
+  ### **3. Compute required arrival time**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190872604-064e7b09-dc8f-43ba-a469-58ade1dacb64.png)
+   
+ ### **4. Compute slack and introduction to GBA-PBA analysis**  
+ 
+  ![image](https://user-images.githubusercontent.com/67214592/190872911-c16ab88b-d55b-478a-a832-293528270aaf.png)
+  
+  ![image](https://user-images.githubusercontent.com/67214592/190872899-5f7e48c1-85d2-4e67-b60c-5c6b64507cfc.png)
+  
+ ### **5. Compute pins to nodes and compute AAT,RAT and slack**
+   
+  ![image](https://user-images.githubusercontent.com/67214592/190872963-d80bd0f3-6dba-450c-976d-6fd7eb1aa744.png)
+  
+  AAT
+  
+  ![image](https://user-images.githubusercontent.com/67214592/190873003-20b13c8c-22cc-45d4-821a-457b41c55204.png)
+  
+  RAT
+  
+  ![image](https://user-images.githubusercontent.com/67214592/190873020-0a53910f-f5c7-460b-adab-8e88e3071875.png)
+  
+  Slack
+  
+  ![image](https://user-images.githubusercontent.com/67214592/190873038-71e4e273-e746-4c1f-88ad-d2ee0b5ede74.png)
+  
+  
+ ## **III. Clock-to-q delay, library setup, hold time and jitter**  
+ 
+  ### **1. Introduction to transistor level circuit for flops**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190873841-23678159-691f-443f-8b6c-d4a41c7aaeb9.png)
+  
+  ### **2. Negative and positive latch transistor level operation**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190874008-d1024a08-3e13-489a-8677-d2d2b29e4e13.png)
+   
+   ![image](https://user-images.githubusercontent.com/67214592/190874057-4988429b-3b52-4524-8d61-fb327bfb75a8.png)
+   
+  ### **3. Library setup time calculation**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190874223-0850f803-51eb-4500-9293-8ba3bfdf7787.png)
+   
+  ### **4. Clk-q delay calculation**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190874345-800098fb-62a2-4183-b550-709eed07c5ee.png)
+
+
+   
+   
+  
+
   
   
   
