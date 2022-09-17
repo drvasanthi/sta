@@ -178,6 +178,10 @@ VI. [**OCV timing and Pessimism removal**]
   ### **4. Clk-q delay calculation**
   
    ![image](https://user-images.githubusercontent.com/67214592/190874345-800098fb-62a2-4183-b550-709eed07c5ee.png)
+   
+  ### **5. Steps to create eye diagram for jitter analysis**
+  
+  
 
 
    
