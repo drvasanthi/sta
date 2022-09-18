@@ -106,6 +106,8 @@ VI. [**OCV timing and Pessimism removal**]
   
   ### **4. Introduction to slew, load and clock checks**
   
+   Slew is the transition time of a signal, the time it takes for a signal to change between two specific levels.
+  
    ![image](https://user-images.githubusercontent.com/67214592/190871423-53847fb9-30ca-4f18-a9d3-da521624fe68.png)
    
    ![image](https://user-images.githubusercontent.com/67214592/190871466-f669634d-de9a-48d8-a5be-33133e0c1b7e.png)
@@ -113,6 +115,8 @@ VI. [**OCV timing and Pessimism removal**]
    ![image](https://user-images.githubusercontent.com/67214592/190871546-f90b9cd2-308a-4bf9-8c37-362ebe22625d.png)
    
    ![image](https://user-images.githubusercontent.com/67214592/190871612-d1c107ac-6102-42c5-b5ac-2922832da1c0.png)
+   
+   Skew is the difference in the arrival of the clock at two consecutive clock pins of sequential elements.
    
    ![image](https://user-images.githubusercontent.com/67214592/190871691-45254e6e-6977-4a5e-8cee-b95b2010feba.png)
    
@@ -178,7 +182,7 @@ VI. [**OCV timing and Pessimism removal**]
    ![image](https://user-images.githubusercontent.com/67214592/190874476-9b1b2eeb-b257-4b3f-81ae-9cfdc81e3ab6.png)
    
   ### **5. Steps to create eye diagram for jitter analysis**
-  
+   
    ![image](https://user-images.githubusercontent.com/67214592/190875544-06f7a983-18d7-40bc-8135-c3a07e5b8d97.png) 
    
    ![image](https://user-images.githubusercontent.com/67214592/190875581-76559d21-8b98-480a-b742-042220a410fd.png)
@@ -189,6 +193,9 @@ VI. [**OCV timing and Pessimism removal**]
    
    ![image](https://user-images.githubusercontent.com/67214592/190875644-88e875b6-721f-4eef-832f-3013954ad872.png)
    
+   > Jitter : Clock jitter refers to the temporal variation of the clock period at a given point — that is, the clock period can reduce or expand on a cycle-by-cycle basis.
+   > Clock Uncertainty :Clock uncertainty is the deviation of the actual arrival time of the clock edge with respect to ideal arrival time. The deviation happens mainly due to jitter and noise.
+   
  ## **IV. Textual timing reports and hold analysis**  
    
   ### **1. Setup & Hold Analysis - graphical to textual representation**
@@ -196,6 +203,8 @@ VI. [**OCV timing and Pessimism removal**]
    ![image](https://user-images.githubusercontent.com/67214592/190875711-d69ddf6e-0c9d-4436-b8da-aca4b95cc872.png)
    
    ![image](https://user-images.githubusercontent.com/67214592/190875730-2a44925c-878e-47ab-a8a4-505cbce88de6.png)
+   
+   > net delay is b1/a & cell delay is b1/y
    
    ![image](https://user-images.githubusercontent.com/67214592/190875744-85736261-871c-48fe-b4a4-decea1071c89.png)
    
