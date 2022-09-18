@@ -33,8 +33,8 @@ V. [**On-chip Variation**]
 
 VI. [**OCV timing and Pessimism removal**]
   1. [OCV based setup timing analysis]  
-  2. [Setup timing analysis after pessimism removal]
-  3. [OCV based hold timing analysis]
+  2. [OCV based hold timing analysis]
+  3. [Setup timing analysis after pessimism removal]
   4. [Hold timing analysis after pessimism removal]
   
    
@@ -222,6 +222,16 @@ VI. [**OCV timing and Pessimism removal**]
    ![image](https://user-images.githubusercontent.com/67214592/190875956-26bb6f33-18f9-48a1-aa05-56e9ef505563.png)
    
  ## **VI. OCV timing and Pessimism removal**
+  
+   ![image](https://user-images.githubusercontent.com/67214592/190888486-d9e4866b-81b3-4642-9fef-4c9d4073b5f7.png)
+   
+   ![image](https://user-images.githubusercontent.com/67214592/190888496-d3992490-4600-45f8-819e-434136d1e9a0.png)
+   
+   ![image](https://user-images.githubusercontent.com/67214592/190888516-13173baa-6bc3-40b9-baa6-708c79485caf.png)
+   
+   ![image](https://user-images.githubusercontent.com/67214592/190888528-ba2e42c3-02ec-44e7-b4b8-569cde47d612.png)
+   
+   
   
 
    
