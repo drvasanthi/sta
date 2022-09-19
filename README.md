@@ -488,11 +488,7 @@ CPPR = Late rise - Early rise = 76.471405-48.992180=27.479225ps
 
 ![image](https://user-images.githubusercontent.com/67214592/191079478-ed259196-d45a-47b4-bc06-e711c04615ff.png)
               
-In the present opentimer pessimism is not being considered hence RAT value is given as 547.492ps. <br>
-
-If we modify U5 we might be able to fix the slack violation.<br>
-
-swapping nand4 with nand2.<br>
+In order to fix this negative violation swap nand4 with nand2. 
 
 ![image](https://user-images.githubusercontent.com/62461290/191070993-acffc646-ab6c-4f04-8617-66fe8d95a493.png)<br>
 
