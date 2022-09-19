@@ -36,11 +36,15 @@ VI. [**OCV timing and Pessimism removal**]
   2. [OCV based hold timing analysis]
   3. [Setup timing analysis after pessimism removal]
   4. [Hold timing analysis after pessimism removal]
+ 
+VII. Conclusion
   
    
 <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
   
 ## TABLE OF CONTENT
+
+<h1 align="center">STATIC TIMING ANALYSIS - I</h1>
   
 ## **I. Introduction**
   
@@ -193,7 +197,7 @@ VI. [**OCV timing and Pessimism removal**]
    
    ![image](https://user-images.githubusercontent.com/67214592/190875644-88e875b6-721f-4eef-832f-3013954ad872.png)
    
-   > Jitter : Clock jitter refers to the temporal variation of the clock period at a given point — that is, the clock period can reduce or expand on a cycle-by-cycle basis.
+   > Jitter : Clock jitter refers to the temporal variation of the clock period at a given point — that is, the clock period can reduce or expand on a cycle-by-cycle basis.  
    > Clock Uncertainty :Clock uncertainty is the deviation of the actual arrival time of the clock edge with respect to ideal arrival time. The deviation happens mainly due to jitter and noise.
    
  ## **IV. Textual timing reports and hold analysis**  
@@ -239,6 +243,190 @@ VI. [**OCV timing and Pessimism removal**]
    ![image](https://user-images.githubusercontent.com/67214592/190888516-13173baa-6bc3-40b9-baa6-708c79485caf.png)
    
    ![image](https://user-images.githubusercontent.com/67214592/190888528-ba2e42c3-02ec-44e7-b4b8-569cde47d612.png)
+   
+   
+ ## **VII. Conclusion**
+ 
+   The below concept has done the analysis for reg2reg,  
+   
+  ![image](https://user-images.githubusercontent.com/67214592/191010686-deab9346-53ae-4c6d-9aaf-3a61a818b05b.png)
+  
+  The process remains same for various analysis, accept the checks will be different.
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191011052-a25e14a0-e36d-4a62-8c5d-4d9367be462c.png)
+  
+  * Slew/Transition analysis is performed with library setup and hold time.
+  
+  * Clock analysis is highly dependent on OCV and pessimism removal
+ 
+ 
+ <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
+ 
+ ## **I. Introduction to STA 2 and OpenTimer Installation Guidance**
+ 
+ ## System Requirements
+
+OpenTimer is very self-contained and has very few dependencies.
+To compile OpenTimer, you need a [C++17][C++17] compiler. 
+We currently support:
+
++ GNU C++ Compiler v7.3 with -std=c++1z
++ Clang C++ Compiler v6.0 with -std=c++17
+
+In addition, you need a tcl shell interpreter:
+
++ [tclsh](https://www.tcl.tk/about/language.html) 
+(most Unix/Linux/OSX distributions already include tclsh)
+
+OpenTimer has been tested to run well on Linux distributions and MAC OSX.
+
+## Build through CMake
+
+We use [CMake](https://cmake.org/) to manage the source and tests.
+We recommend using out-of-source build.
+
+```bash
+~$ git clone https://github.com/OpenTimer/OpenTimer.git
+~$ cd OpenTimer
+~$ mkdir build
+~$ cd build
+~$ cmake ../
+~$ make 
+```
+
+After successful build, you can find binaries and libraries in the folders `bin` and `lib`, respectively.
+
+## Launch Opentimer
+
+![image](https://user-images.githubusercontent.com/67214592/191012910-e421b706-8cc4-431c-8fad-7732288db7ec.png)
+
+## **II. Constraints creation commands for OpenTimer**
+
+ ### **1. Clock creation and clock arrival time definition**
+ 
+ > ![image](https://user-images.githubusercontent.com/67214592/191017072-8021d57e-2280-4857-acb9-20a1cee96fa4.png)
+ 
+ > `Clock constrains`    
+ **clock clk 1000 50**    
+ clock - Keyword for opentimer  
+ clk - net/port name.  
+ 1000 - clock period is 1000ps/1ns  
+ 50 - duty cycle   
+
+  ![image](https://user-images.githubusercontent.com/67214592/191015610-2b441877-044c-40f4-a060-87a41887caf1.png)
+  
+ > `Arrival Time for the Clock Port`  
+ **at clk 0 500 0 500**  
+ at - Keyword for opentimer  
+ clk - net/port name.  
+ 0 - Early Rise Arrival time.  
+ 500 - Early Fall Arrival time.  
+ 0 - Late Rise Arrival time.  
+ 500 - Late Fall Arrival time.
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191015640-ad92eee9-c15e-48ec-89a9-6becb9943a20.png)
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191024091-505ebc57-1442-4a0d-afc2-301ecd8897e0.png)
+  
+ ### **2.Input delay constraints for interface setup/hold analysis**
+  
+ > `Arrival Time for the Input Port`  
+ **at in 53 34 121 125**  
+ at - Keyword for opentimer  
+ in - net/port name.  
+ 53 - Early Rise Arrival time.  
+ 34 - Early Fall Arrival time.  
+ 121 - Late Rise Arrival time.  
+ 125 - Late Fall Arrival time.  
+ 
+  ![image](https://user-images.githubusercontent.com/67214592/191024721-71cc96dc-e1b4-49ce-bd04-6f3c261d829c.png)
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191026653-dc2f51d7-795d-477e-b647-b15cfe98dc1f.png)
+  
+ ### **3. Clock slew and data slew constraints**
+ 
+  >`Slew analysis for Clock port`  
+  **slew clk 70 50 70 50**  
+  slew - Keyword for opentimer   
+  clk - net/port name.  
+  70 - Early Rise Slew.  
+  50 - Early Fall Slew.  
+  70 - Late Rise Slew.  
+  50 - Late Fall Slew.
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191028404-08fc7540-fc2f-40ed-a0ac-d18d8dd5baa2.png)
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191028838-0c390893-428e-4e43-abb7-0fc0f8bb317e.png)
+  
+  >`Slew analysis for Input port`  
+  **slew clk 150 100 150 100**  
+  slew - Keyword for opentimer   
+  in - net/port name.  
+  150 - Early Rise Slew.  
+  100 - Early Fall Slew.  
+  150 - Late Rise Slew.  
+  100 - Late Fall Slew.
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191029200-a5bb1746-f7ec-4c8b-975d-e70feeab7123.png)
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191029463-739ae6ca-02a1-418c-b2f4-be3f9f7f6590.png)
+  
+  ### **4.Output load and output delay constraints**
+  
+   > `load out 40`    
+   load : Keyword  
+   out : net/port name.  
+   40 : load is 40fF.
+   
+   ![image](https://user-images.githubusercontent.com/67214592/191029932-74852f62-6ee2-4e9a-a5e3-b8f0eaf7f80b.png)
+   
+   > `rat out 160 160 180 180`   
+   rat - Keyword  
+   out - net/port name.  
+   160 - Early Rise Required Arrival Time.  
+   160 - Early Fall Required Arrival Time.  
+   180 - Late Rise Required Arrival Time.  
+   180 - Late Fall Required Arrival Time.
+   
+   ![image](https://user-images.githubusercontent.com/67214592/191030241-0e820be7-334f-4e5c-a6ba-c51b69cd5358.png)
+   
+ ## **III. Full reg2reg analysis using OpenTimer tool**  
+
+  ### **1. AAT and RAT calculation basics**
+  
+  `Slack Analysis Report for below design`
+  
+   ![image](https://user-images.githubusercontent.com/67214592/191031149-303bb779-7e26-451c-96ff-64bf0f09a46d.png)
+   
+   * d pin of flop2   // provides only the worst path
+   * u6 cell of input a
+   * u6 cell of input b
+   * u5 cell of input a  // provides worst slack or less positive than other
+   * u5 cell of input b
+   
+   
+   `Slack = RT-AT  
+   Slack = 1010.5-392.75 = 617.74`
+   
+   AT is: 
+   
+   
+   RT is:
+   
+   * AT at clock pin
+   * 
+   
+   
+   
+  
+  
+  
+  
+  
+  
+ 
+ 
+
    
    
   
