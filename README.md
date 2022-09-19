@@ -345,12 +345,30 @@ After successful build, you can find binaries and libraries in the folders `bin`
  
  ### **1. Clock creation and clock arrival time definition**
  
-  
+  > `Clock constrains for the Clk pin`  
+  ** clock clk 1000 50**  
+  clock - Keyword for opentimer.  
+  clk - net/port name.  
+  1000 - clock period in ps.  
+  50 - duty cycle.  
  
+   ![image](https://user-images.githubusercontent.com/67214592/191047139-e0e26740-0852-4005-9bb1-18d14e965374.png)
    
+ ### **2. Input delay constraints for interface setup/hold analysis**
+ 
+ > `Arrival Time of Clock Port`  
+ **at clk 0 500 0 500**  
+ at - Keyword for opentimer.  
+ clk - net/port name.  
+ 0 - Early Rise Arrival time.  
+ 500 - Early Fall Arrival time.  
+ 0 - Late Rise Arrival time.  
+ 500 - Late Fall Arrival time.
 
+ ![image](https://user-images.githubusercontent.com/67214592/191047850-138c8db0-ff27-4b0c-8a8c-23615ed86d92.png)
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191048895-9b676b38-8a7e-4737-8b04-4e9c570a4e2a.png)
    
-  
 
    
    
