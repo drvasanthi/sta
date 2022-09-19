@@ -357,7 +357,7 @@ After successful build, you can find binaries and libraries in the folders `bin`
  ### **2. Input delay constraints for interface setup/hold analysis**
  
  > `Arrival Time of Clock Port`  
- **at clk 0 500 0 500**  
+ **at clk 12 45 18 72**  
  at - Keyword for opentimer.  
  clk - net/port name.  
  0 - Early Rise Arrival time.  
@@ -369,9 +369,71 @@ After successful build, you can find binaries and libraries in the folders `bin`
  
  ![image](https://user-images.githubusercontent.com/67214592/191048895-9b676b38-8a7e-4737-8b04-4e9c570a4e2a.png)
    
+ > `Arrival time of Input port`  
+  **at in 53 34 121 125**  
+ at - Keyword for opentimer.  
+ clk - net/port name.  
+ 53 - Early Rise Arrival time.  
+ 34 - Early Fall Arrival time.  
+ 121 - Late Rise Arrival time.  
+ 125 - Late Fall Arrival time.
+   
+  ![image](https://user-images.githubusercontent.com/67214592/191068537-a93c735f-cdab-433e-8df6-2a325b57d356.png)
+  
+  ![image](https://user-images.githubusercontent.com/67214592/191069074-deb30aa3-3d2a-492d-8212-5589fd372f7d.png)
+  
+### **3. Clock slew and data slew constraints**
 
-   
-   
+ > `Slew for Clock port`  
+ ** slew clk 70 50 70 50**  
+ slew - Keyword  
+ clk - net/port name.  
+ 70 - Early Rise Slew.  
+ 50 - Early Fall Slew.  
+ 70 - Late Rise Slew.  
+ 50 - Late Fall Slew.  
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191069725-e38079fd-9306-45c7-99e0-4a4dbde14357.png)
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191070007-844b640c-9e01-487d-b78b-df270187838c.png)
+ 
+  > `Slew for input port`  
+ ** slew clk 150 100 150 100**  
+ slew - Keyword  
+ in - net/port name.  
+ 150 - Early Rise Slew.  
+ 100 - Early Fall Slew.  
+ 150 - Late Rise Slew.  
+ 100 - Late Fall Slew. 
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191070238-63a015c6-4fd1-45ad-a841-58017c93de5e.png)
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191070402-71caa22f-415f-4451-8727-7424c3a733cc.png)
+ 
+### **4. Output load and output delay constraints**
+
+> `Output Load`
+**load out 40**  
+load - keyword  
+out - net/port name  
+40 - load value is 40fF
+
+![image](https://user-images.githubusercontent.com/67214592/191070740-35695f8c-7bf6-42d5-8e9b-28dc0dfcd54a.png)
+
+> `Output required time`  
+**rat out 160 160 180 180**  
+rat - Keyword specified for opentimer.  
+out - net/port name.  
+160 - Early Rise Required Arrival Time.  
+160 - Early Fall Required Arrival Time.  
+180 - Late Rise Required Arrival Time.  
+180 - Late Fall Required Arrival Time.  
+
+![image](https://user-images.githubusercontent.com/67214592/191071179-af91f5b6-004c-43a0-a8c6-309971229473.png)
+
+## **III. Full reg2reg analysis using OpenTimer tool**
+ 
+ 
   
    
   
