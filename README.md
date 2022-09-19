@@ -36,6 +36,8 @@ VI. [**OCV timing and Pessimism removal**]
   2. [OCV based hold timing analysis]
   3. [Setup timing analysis after pessimism removal]
   4. [Hold timing analysis after pessimism removal]
+
+VII. [**Conclusion**]
   
    
 <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
@@ -83,7 +85,10 @@ VII. [**Latch timing and load/slew analysis**]
   3. [Introduction to different kinds of powers]
   4. [Load and Slew inter-dependence]
 
-VIII. Conclusion
+VIII. [**Conclusion**]
+
+
+<h1 align="center">STATIC TIMING ANALYSIS - I</h1>
 
 ## **I. Introduction**
   
@@ -283,6 +288,68 @@ VIII. Conclusion
    
    ![image](https://user-images.githubusercontent.com/67214592/190888528-ba2e42c3-02ec-44e7-b4b8-569cde47d612.png)
    
+ ### **VII. Conclusion**
+ 
+   ![image](https://user-images.githubusercontent.com/67214592/191043527-aa6d1614-8324-4c48-b49f-ca0553680170.png)
+   
+   * The same analysis can be performed to other types of setup/hold analysis.  
+   ![image](https://user-images.githubusercontent.com/672145 92/191043729-235498ec-8b65-4c32-82c5-9ae43310c390.png)
+   
+   * Slew/Transition analysis is done with library setup and hold time.  
+   
+   * Clock analysis is highly dependant on OCv and pessimism removal.
+ 
+ 
+ <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
+ 
+ ## **I. Introduction to STA 2 and OpenTimer Installation Guidance**
+ 
+  # Compile OpenTimer
+
+## System Requirements
+
+OpenTimer is very self-contained and has very few dependencies.
+To compile OpenTimer, you need a [C++17][C++17] compiler. 
+We currently support:
+
++ GNU C++ Compiler v7.3 with -std=c++1z
++ Clang C++ Compiler v6.0 with -std=c++17
+
+In addition, you need a tcl shell interpreter:
+
++ [tclsh](https://www.tcl.tk/about/language.html) 
+(most Unix/Linux/OSX distributions already include tclsh)
+
+OpenTimer has been tested to run well on Linux distributions and MAC OSX.
+
+## Build through CMake
+
+We use [CMake](https://cmake.org/) to manage the source and tests.
+We recommend using out-of-source build.
+
+```bash
+~$ git clone https://github.com/OpenTimer/OpenTimer.git
+~$ cd OpenTimer
+~$ mkdir build
+~$ cd build
+~$ cmake ../
+~$ make 
+```
+
+After successful build, you can find binaries and libraries in the folders `bin` and `lib`, respectively.
+
+> To invoke OpenTimer
+
+![image](https://user-images.githubusercontent.com/67214592/191044997-a587f845-1536-4b94-9ce7-d9f9ca901cca.png)
+
+## **2. Constraints creation commands for OpenTimer**
+ 
+ ### **1. Clock creation and clock arrival time definition**
+ 
+  
+ 
+   
+
    
   
 
