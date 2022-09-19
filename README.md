@@ -31,9 +31,9 @@ V. [**On-chip Variation**](https://github.com/drvasanthi/sta#v-on-chip-variation
   2. [Sources of variation - oxide thickness](https://github.com/drvasanthi/sta#2-sources-of-variation---oxide-thickness)  
   3. [Relation between resistance, drain current and delay](https://github.com/drvasanthi/sta#3-relation-between-resistance-drain-current-and-delay)  
 
-VI. [**OCV timing and Pessimism removal**] (https://github.com/drvasanthi/sta#vi-ocv-timing-and-pessimism-removal)  
+VI. [**OCV timing and Pessimism removal**](https://github.com/drvasanthi/sta#vi-ocv-timing-and-pessimism-removal)  
 
-VII. [**Conclusion**] (https://github.com/drvasanthi/sta#vii-conclusion)  
+VII. [**Conclusion**](https://github.com/drvasanthi/sta#vii-conclusion)  
   
    
 <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
