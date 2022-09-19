@@ -412,8 +412,8 @@ After successful build, you can find binaries and libraries in the folders `bin`
  
 ### **4. Output load and output delay constraints**
 
-> `Output Load`
-**load out 40**  
+> `Output Load`  
+**load out 40**    
 load - keyword  
 out - net/port name  
 40 - load value is 40fF
@@ -432,6 +432,14 @@ out - net/port name.
 ![image](https://user-images.githubusercontent.com/67214592/191071179-af91f5b6-004c-43a0-a8c6-309971229473.png)
 
 ## **III. Full reg2reg analysis using OpenTimer tool**
+ 
+ ### **1. AAT and RAT calculation basics**
+ 
+ `Slack Analysis`
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191073534-d4bbfd4b-0f38-4a3d-a541-030536f4a56f.png)
+ 
+ > Slack = RT - AT = 1010.5 - 392.79 = 617.741ps
  
  
   
