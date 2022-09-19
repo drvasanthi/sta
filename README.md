@@ -2,61 +2,57 @@
 
 ## TABLE OF CONTENT
 
-I. [**Introduction**]
-  1. [Introduction to timing path and arrival time]
-  2. [Introduction to required time and slcak] 
-  3. [Introduction to basic categories of setup and hold analysis, data checks and latch timing]
-  4. [Introduction to slew, load and clock checks]
+I. [**Introduction**](https://github.com/drvasanthi/sta#i-introduction)  
+  1. [Introduction to timing path and arrival time](https://github.com/drvasanthi/sta#1-introduction-to-timing-path-and-arrival-time)  
+  2. [Introduction to required time and slcak](https://github.com/drvasanthi/sta#2-introduction-to-required-time-and-slack)  
+  3. [Introduction to basic categories of setup and hold analysis, data checks and latch timing](https://github.com/drvasanthi/sta#3-introduction-to-basic-categories-of-setup-and-hold-analysis-data-checks-and-latch-timing)  
+  4. [Introduction to slew, load and clock checks](https://github.com/drvasanthi/sta#4-introduction-to-slew-load-and-clock-checks)  
 
-II. [**Introduction to Timing Graph**]
-  1. [Convert logic gates into nodes] 
-  2. [Compute actual arrival time]
-  3. [Compute required arrival time]
-  4. [Compute slack and introduction to GBA-PBA analysis]  
-  5. [Compute pins to nodes and compute AAT,RAT and slack]  
+II. [**Introduction to Timing Graph**](https://github.com/drvasanthi/sta#ii-introduction-to-timing-graph)  
+  1. [Convert logic gates into nodes](https://github.com/drvasanthi/sta#1-convert-logic-gates-into-nodes)  
+  2. [Compute actual arrival time](https://github.com/drvasanthi/sta#2-compute-actual-arrival-time)  
+  3. [Compute required arrival time](https://github.com/drvasanthi/sta#3-compute-required-arrival-time)  
+  4. [Compute slack and introduction to GBA-PBA analysis](https://github.com/drvasanthi/sta#4-compute-slack-and-introduction-to-gba-pba-analysis)  
+  5. [Compute pins to nodes and compute AAT,RAT and slack](https://github.com/drvasanthi/sta#5-compute-pins-to-nodes-and-compute-aatrat-and-slack)  
 
-III. [**Clock-to-q delay, library setup, hold time and jitter**]  
-  1. [Introduction to transistor level circuit for flops]  
-  2. [Negative and positive latch transistor level operation]  
-  3. [Library setup time calculation]  
-  4. [Clock-to-q delay calculation]  
-  5. [Steps to create eye diagram for jitter analysis]  
-  6. [Jitter extraction and accounting setup timing analysis]  
+III. [**Clock-to-q delay, library setup, hold time and jitter**](https://github.com/drvasanthi/sta#iii-clock-to-q-delay-library-setup-hold-time-and-jitter)  
+  1. [Introduction to transistor level circuit for flops](https://github.com/drvasanthi/sta#1-introduction-to-transistor-level-circuit-for-flops)  
+  2. [Negative and positive latch transistor level operation](https://github.com/drvasanthi/sta#2-negative-and-positive-latch-transistor-level-operation)    
+  3. [Library setup time calculation](https://github.com/drvasanthi/sta#3-library-setup-time-calculation)  
+  4. [Clock-to-q delay calculation](https://github.com/drvasanthi/sta#4-clk-q-delay-calculation)   
+  5. [Steps to create eye diagram for jitter analysis](https://github.com/drvasanthi/sta#5-steps-to-create-eye-diagram-for-jitter-analysis)  
+  6. [Jitter extraction and accounting setup timing analysis](https://github.com/drvasanthi/sta#6-jitter-extraction-and-accounting-in-setup-timing-analysis)  
 
-IV. [**Textual timing report and hold analysis**]  
-  1. [Setup & Hold Analysis - graphical to textual representation]  
+IV. [**Textual timing report and hold analysis**](https://github.com/drvasanthi/sta#iv-textual-timing-reports-and-hold-analysis)  
+  1. [Setup & Hold Analysis - graphical to textual representation](https://github.com/drvasanthi/sta#1-setup--hold-analysis---graphical-to-textual-representation)  
  
-V. [**On-chip Variation**]  
-  1. [Sources of variation - etching]  
-  2. [Sources of variation - oxide thickness]  
-  3. [Relation between resistance, drain current and delay]  
+V. [**On-chip Variation**](https://github.com/drvasanthi/sta#v-on-chip-variation)  
+  1. [Sources of variation - etching](https://github.com/drvasanthi/sta#1-sources-of-variation---etching)  
+  2. [Sources of variation - oxide thickness](https://github.com/drvasanthi/sta#2-sources-of-variation---oxide-thickness)  
+  3. [Relation between resistance, drain current and delay](https://github.com/drvasanthi/sta#3-relation-between-resistance-drain-current-and-delay)  
 
-VI. [**OCV timing and Pessimism removal**]
-  1. [OCV based setup timing analysis]  
-  2. [OCV based hold timing analysis]
-  3. [Setup timing analysis after pessimism removal]
-  4. [Hold timing analysis after pessimism removal]
+VI. [**OCV timing and Pessimism removal**] (https://github.com/drvasanthi/sta#vi-ocv-timing-and-pessimism-removal)  
 
-VII. [**Conclusion**]
+VII. [**Conclusion**] (https://github.com/drvasanthi/sta#vii-conclusion)  
   
    
 <h1 align="center">STATIC TIMING ANALYSIS - II</h1>
   
 ## TABLE OF CONTENT
 
-I. [**Introduction to STA 2 and OpenTimer Installation Guidance**]
+I. [**Introduction to STA 2 and OpenTimer Installation Guidance**](https://github.com/drvasanthi/sta#i-introduction-to-sta-2-and-opentimer-installation-guidance)  
 
-II. [**Constraints creation commands for OpenTimer**]  
-  1. [Clock creation and clock arrival time definition]  
-  2. [Input delay constraints for interface setup/hold analysis]  
-  3. [Clock slew and data slew constraints]  
-  4. [Output load and output delay constraints]  
+II. [**Constraints creation commands for OpenTimer**](https://github.com/drvasanthi/sta#2-constraints-creation-commands-for-opentimer)  
+  1. [Clock creation and clock arrival time definition](https://github.com/drvasanthi/sta#1-clock-creation-and-clock-arrival-time-definition)  
+  2. [Input delay constraints for interface setup/hold analysis](https://github.com/drvasanthi/sta#2-input-delay-constraints-for-interface-setuphold-analysis)  
+  3. [Clock slew and data slew constraints](https://github.com/drvasanthi/sta#3-clock-slew-and-data-slew-constraints)  
+  4. [Output load and output delay constraints](https://github.com/drvasanthi/sta#4-output-load-and-output-delay-constraints)   
   
-III. [**Full reg2reg analysis using OpenTimer tool**]    
-  1. [AAT and RAT calculation basics]  
-  2. [Slack compute, pessimism (cppr), engineering change order (eco)]  
+III. [**Full reg2reg analysis using OpenTimer tool**](https://github.com/drvasanthi/sta#iii-full-reg2reg-analysis-using-opentimer-tool)  
+  1. [AAT and RAT calculation basics](https://github.com/drvasanthi/sta#1-aat-and-rat-calculation-basics)  
+  2. [Slack compute, pessimism (cppr), engineering change order (eco)](https://github.com/drvasanthi/sta#2-slack-compute-pessimism-cppr-engineering-change-order-eco)  
 
-IV. [**Interface Analysis**]  
+IV. [**Interface Analysis**](https://github.com/drvasanthi/sta#iv-interface-analysis)  
   1. [Introduction to interface Analysis]  
   2. [Case1:C2Q and combinational delay for input is known]  
   3. [Case2:Input waveform specifications given]  
