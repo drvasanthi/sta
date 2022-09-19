@@ -441,8 +441,66 @@ out - net/port name.
  
  > Slack = RT - AT = 1010.5 - 392.79 = 617.741ps
  
+ > Early time arrival of the clock = 12ps
  
-  
+ ![image](https://user-images.githubusercontent.com/67214592/191074720-a7d7d09c-aa8d-4145-ac15-71ab5e6c4df0.png)
+ 
+ ![image](https://user-images.githubusercontent.com/67214592/191075917-c3e3afe6-8b2d-4466-ae3c-afc43665ab12.png)
+ 
+ * For late rise in launch path, consider early rise in capture path
+ * In launch path consider all the late delays/late constraints/late libs
+ * In capture path consider all the early delays/early constraints/early libs.
+ * Setup analysis at capture path = 1000ps + 12ps = 1012ps
+ * Therfore 1012-1010.5 = 1.5ps. An additional 1.5ps is reported library setup time from late.lib files.
+
+`
+RAT = clock period - library setup time + clock arrival time
+RAT = 1000 - 1.5 + 12 = 1010.5ps
+`
+
+### **2. Slack compute, pessimism (cppr), engineering change order (eco)**
+
+Analysis of clock buffer/clock tree synthesis
+
+![image](https://user-images.githubusercontent.com/67214592/191076722-8e988192-aafd-43de-93bb-8070e3367faf.png)
+
+Modify `.v` and `.timing` files
+
+* U8 and u9 lies in the common path of launch and capture flop.
+* This is the CPPR, where should remove additional pessimism.
+* Yellow line is most violeted path
+
+![image](https://user-images.githubusercontent.com/67214592/191079665-b2f23895-d5af-4073-a2d9-d72fed96080b.png)
+
+![image](https://user-images.githubusercontent.com/62461290/191066729-98fe8691-4c31-4aa4-869b-9b8322ee5b43.png)
+
+Slack = RAT-AAT = 547.492-613.328 = -65.836ps <br>
+
+![image](https://user-images.githubusercontent.com/62461290/191068376-d10fecb4-8a6d-4976-91b8-072dffa9d8c0.png) <br>
+
+CPPR = Late rise - Early rise = 76.471405-48.992180=27.479225ps 
+
+![image](https://user-images.githubusercontent.com/67214592/191079875-3a3fcd65-5a7d-4722-a4c9-a155d721b342.png)
+
+![image](https://user-images.githubusercontent.com/67214592/191080096-f16e0cb0-84d4-4b6e-8596-7eefba9aea8e.png)
+
+![image](https://user-images.githubusercontent.com/62461290/191068454-c14dfd08-6586-4077-84d0-2d5adbdd1506.png) <br>
+
+![image](https://user-images.githubusercontent.com/67214592/191079478-ed259196-d45a-47b4-bc06-e711c04615ff.png)
+              
+In the present opentimer pessimism is not being considered hence RAT value is given as 547.492ps. <br>
+
+If we modify U5 we might be able to fix the slack violation.<br>
+
+swapping nand4 with nand2.<br>
+
+![image](https://user-images.githubusercontent.com/62461290/191070993-acffc646-ab6c-4f04-8617-66fe8d95a493.png)<br>
+
+The negative slack became postive.<br>
+
+![image](https://user-images.githubusercontent.com/62461290/191071697-2b38641b-a410-49df-91d9-6d883e24d6b6.png) <br>
+
+
    
   
   
