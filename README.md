@@ -293,6 +293,7 @@ VIII. [**Conclusion**]
    ![image](https://user-images.githubusercontent.com/67214592/191043527-aa6d1614-8324-4c48-b49f-ca0553680170.png)
    
    * The same analysis can be performed to other types of setup/hold analysis.  
+   
    ![image](https://user-images.githubusercontent.com/672145 92/191043729-235498ec-8b65-4c32-82c5-9ae43310c390.png)
    
    * Slew/Transition analysis is done with library setup and hold time.  
