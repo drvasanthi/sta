@@ -497,7 +497,23 @@ The negative slack became postive.<br>
 ![image](https://user-images.githubusercontent.com/62461290/191071697-2b38641b-a410-49df-91d9-6d883e24d6b6.png) <br>
 
 
-   
+## **IV. Interface Analysis**
+
+### **1. Introduction to interface Analysis**
+
+The interface analysis is done on in2reg, reg2out and in2out.
+
+![image](https://user-images.githubusercontent.com/67214592/191080969-07b7b6b8-d2c1-4b7b-ad59-313fb015684e.png)
+
+![image](https://user-images.githubusercontent.com/67214592/191081127-5f07809f-2369-4867-914e-16196da0a2bf.png)
+
+![image](https://user-images.githubusercontent.com/67214592/191081169-ea6d696b-7b9b-4f85-9672-20afc467e319.png)
+
+![image](https://user-images.githubusercontent.com/67214592/191081202-9d41f113-dec4-45b7-a3b5-1e439e3f8499.png)
+
+![image](https://user-images.githubusercontent.com/67214592/191081246-cd7fceef-ad37-472e-9657-82a1b756084c.png)
+
+
   
   
 
