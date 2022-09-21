@@ -53,35 +53,8 @@ III. [**Full reg2reg analysis using OpenTimer tool**](https://github.com/drvasan
   2. [Slack compute, pessimism (cppr), engineering change order (eco)](https://github.com/drvasanthi/sta#2-slack-compute-pessimism-cppr-engineering-change-order-eco)  
 
 IV. [**Interface Analysis**](https://github.com/drvasanthi/sta#iv-interface-analysis)  
-  1. [Introduction to interface Analysis]  
-  2. [Case1:C2Q and combinational delay for input is known]  
-  3. [Case2:Input waveform specifications given]  
-  4. [Case3:setup_time,hold_time and combinational delay for output is known]  
-  5. [Hold fixing ECO and Case4: output waveform specifications known]  
-  6. [Case5: source synchronous interface analysis for setup]  
-  7. [Source Synchronous interface setup analysis in Opentimer tool]  
-  8. [Source synchronous interface hold analysis]
- 
-V. [**Clock Gating Analysis**]  
-  1. [Introduction to clock gating analysis]  
-  2. [Active high clock gating analysis]  
-  3. [Active low clock gating analysis]  
-  4. [Latch based clock gating technique]  
-  5. [Integrated clock gating (ICG) cell]  
- 
-VI. [**Asynchronous and data checks**]  
-  1. [Inception of asynchronous reset design technique]  
-  2. [How reset synchronizers resolves reset deassertion]  
-  3. [Data-to-data setup and hold check]  
-  4. [Sequential and clock tree min pulse width check]  
 
-VII. [**Latch timing and load/slew analysis**]  
-  1. [Introduction to positive and negative latch behavior]  
-  2. [Reg2latch path with 'time borrow' and 'time given' examples]
-  3. [Introduction to different kinds of powers]
-  4. [Load and Slew inter-dependence]
-
-VIII. [**Conclusion**]
+[**ACKNOWLEDGMENT**]
 
 
 <h1 align="center">STATIC TIMING ANALYSIS - I</h1>
@@ -510,7 +483,9 @@ The interface analysis is done on in2reg, reg2out and in2out.
 ![image](https://user-images.githubusercontent.com/67214592/191081246-cd7fceef-ad37-472e-9657-82a1b756084c.png)
 
 
-  
+##**ACKNOWLEDGEMENT**
+
+  * Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
   
 
 
