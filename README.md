@@ -54,7 +54,11 @@ III. [**Full reg2reg analysis using OpenTimer tool**](https://github.com/drvasan
 
 IV. [**Interface Analysis**](https://github.com/drvasanthi/sta#iv-interface-analysis)  
 
-[**ACKNOWLEDGMENT**](https://github.com/drvasanthi/sta#acknowledgement)
+[**Author**](https://github.com/drvasanthi/iiitb_cg#author)  
+[**Reference**](https://github.com/drvasanthi/iiitb_cg#references)  
+[**Contributers**](https://github.com/drvasanthi/iiitb_cg#contributors)  
+[**Acknowledgment**](https://github.com/drvasanthi/iiitb_cg#acknowledgement)  
+[**Contact Information**](https://github.com/drvasanthi/iiitb_cg#contact-information)  
 
 
 <h1 align="center">STATIC TIMING ANALYSIS - I</h1>
@@ -483,9 +487,35 @@ The interface analysis is done on in2reg, reg2out and in2out.
 ![image](https://user-images.githubusercontent.com/67214592/191081246-cd7fceef-ad37-472e-9657-82a1b756084c.png)
 
 
-## **ACKNOWLEDGEMENT**
+## Author
 
+Vasanthi D R
+
+## References
+ 
+ [1] https://github.com/OpenTimer/OpenTimer
+
+ 
+## Contributors
+
+  * Vasanthi D R
+  * Kunal Ghosh
+  * Madhav Rao
+  * Nanditha Rao
+
+## Acknowledgement
+  
   * Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+  * Madhav Rao, Professor, IIIT-Bangalore.
+  * Nanditha Rao, Professor, IIIT-Bangalore.
+
+## Contact Information
+
+  * Vasanthi D R, PhD Scholar, International Institute of Information Technology, Bangalore vasanthidr11@gmail.com
+  * Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
+  * Madhav Rao, Professor, IIIT-Bangalore. mr@iiitb.ac.in
+  * Nanditha Rao, Professor, IIIT-Bangalore. nanditha.rao@iiitb.ac.in
+  
   
 
 
